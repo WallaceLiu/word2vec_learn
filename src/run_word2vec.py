@@ -6,9 +6,6 @@ Introduces Gensim's Word2Vec model and demonstrates its use on the Lee Corpus.
 
 """
 
-# https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html#sphx-glr-auto-examples-tutorials-run-word2vec-py
-# https://radimrehurek.com/gensim/models/word2vec.html#module-gensim.models.word2vec
-
 import logging
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
