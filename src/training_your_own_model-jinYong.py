@@ -32,8 +32,12 @@ print()
 # model.save(temporary_filepath)
 # new_model = gensim.models.Word2Vec.load(temporary_filepath)
 
-vv=model.wv.most_similar('张君宝')
+vv = model.wv.most_similar('张君宝')
 print(vv)
+vv = model.wv.n_similarity('张君宝', '张三丰')
+print(vv)
+vv = model.wv.similarity('张君宝', '张三丰')
+
 
 # model = gensim.models.Word2Vec(sentences, min_count=2, size=200)
 #
