@@ -4,7 +4,7 @@
 
 可能有不存在的词。作为演示还不错。
 
-# word2vec-GoogleNews-vectors
+# GoogleNews-vectors-negative300
 
 This repository hosts the `word2vec` pre-trained **Google News** corpus 
 (3 billion running words) word vector model (3 million 300-dimension English word vectors). 
