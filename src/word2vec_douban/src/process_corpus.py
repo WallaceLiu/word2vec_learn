@@ -6,9 +6,9 @@ import re
 
 #################### config ###################
 path = "../data/"
-# data = "test_corpus.csv"
-# data = "review_douban_movie.tsv"
-# data = "review_douban_movie.tsv"
+# custom = "test_corpus.csv"
+# custom = "review_douban_movie.tsv"
+# custom = "review_douban_movie.tsv"
 data = "zhidao_dataneg.tsv"
 ############### end of config #################
 

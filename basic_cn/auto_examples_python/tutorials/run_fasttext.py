@@ -31,7 +31,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 # Training time for fastText is significantly higher than the Gensim version of Word2Vec (\ ``15min 42s`` vs ``6min 42s`` on text8, 17 mil tokens, 5 epochs, and a vector size of 100).
 #
 #
-# fastText can be used to obtain vectors for out-of-vocabulary (OOV) words, by summing up vectors for its component char-ngrams, provided at least one of the char-ngrams was present in the training data.
+# fastText can be used to obtain vectors for out-of-vocabulary (OOV) words, by summing up vectors for its component char-ngrams, provided at least one of the char-ngrams was present in the training custom.
 #
 
 
@@ -52,7 +52,7 @@ from pprint import pprint as print
 from gensim.models.fasttext import FastText as FT_gensim
 from gensim.test.utils import datapath
 
-# Set file names for train and test data
+# Set file names for train and test custom
 corpus_file = datapath('lee_background.cor')
 
 model = FT_gensim(size=100)
@@ -193,7 +193,7 @@ print("word" in model)
 
 ###############################################################################
 #
-# Similarity operations work the same way as word2vec. **Out-of-vocabulary words can also be used, provided they have at least one character ngram present in the training data.**
+# Similarity operations work the same way as word2vec. **Out-of-vocabulary words can also be used, provided they have at least one character ngram present in the training custom.**
 #
 
 

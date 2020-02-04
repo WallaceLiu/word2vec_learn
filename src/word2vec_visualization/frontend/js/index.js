@@ -176,36 +176,36 @@ function visualize (word, topn) {
   if (document.getElementById("language").elements["language"].value == "English") {
     if (document.getElementById("metric").value == "Cosine") {
       if (document.getElementById("model").value == "Skipgram") {
-        data_file = "data/en_data_cosine_skipgram.json";
+        data_file = "custom/en_data_cosine_skipgram.json";
       }
       else {
-        data_file = "data/en_data_cosine_cbow.json";
+        data_file = "custom/en_data_cosine_cbow.json";
       }
     }
     else {
       if (document.getElementById("model").value == "Skipgram") {
-        data_file = "data/en_data_euclidean_skipgram.json";
+        data_file = "custom/en_data_euclidean_skipgram.json";
       }
       else {
-        data_file = "data/en_data_euclidean_cbow.json";
+        data_file = "custom/en_data_euclidean_cbow.json";
       }
     }
   }
   else {
     if (document.getElementById("metric").value == "Cosine") {
       if (document.getElementById("model").value == "Skipgram") {
-        data_file = "data/ja_data_cosine_skipgram.json";
+        data_file = "custom/ja_data_cosine_skipgram.json";
       }
       else {
-        data_file = "data/ja_data_cosine_cbow.json";
+        data_file = "custom/ja_data_cosine_cbow.json";
       }
     }
     else {
       if (document.getElementById("model").value == "Skipgram") {
-        data_file = "data/ja_data_euclidean_skipgram.json";
+        data_file = "custom/ja_data_euclidean_skipgram.json";
       }
       else {
-        data_file = "data/ja_data_euclidean_cbow.json";
+        data_file = "custom/ja_data_euclidean_cbow.json";
       }
     }
   }

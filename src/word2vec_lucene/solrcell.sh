@@ -19,7 +19,7 @@ URL=http://localhost:8983/solr/collection1/update/extract
 
 for f in $FILES; do
   echo Posting file $f to $URL
-  curl $URL --data-binary @$f -H 'Content-type:application/pdf' 
+  curl $URL --custom-binary @$f -H 'Content-type:application/pdf'
   echo
 done
 

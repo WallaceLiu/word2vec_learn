@@ -9,10 +9,10 @@ import tensorflow_hub as hub
 
 class LoadData():
     '''
-    The functions include load data
+    The functions include load custom
     '''
     def __init__(self):
-        '''Initialize kinds of parameters，adjust the parameters accroding to data'''
+        '''Initialize kinds of parameters，adjust the parameters accroding to custom'''
         self.seq_length = 128
         
     def load_directory_data(self, directory):
@@ -80,7 +80,7 @@ class ElmoModel_for_Classification():
     '''
     def __init__(self):
         '''
-        Initialize kinds of parameters，adjust the parameters accroding to data
+        Initialize kinds of parameters，adjust the parameters accroding to custom
         '''
         self.batch_size = 32          #训练batch大小
         self.seq_length = 128         #序列长度

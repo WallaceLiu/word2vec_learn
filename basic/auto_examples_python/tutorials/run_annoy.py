@@ -149,7 +149,7 @@ print ("\nAnnoy is {0:.2f} times faster on average on this particular run".forma
 
 ###############################################################################
 # **This speedup factor is by no means constant** and will vary greatly from
-# run to run and is particular to this data set, BLAS setup, Annoy
+# run to run and is particular to this custom set, BLAS setup, Annoy
 # parameters(as tree size increases speedup factor decreases), machine
 # specifications, among other factors.
 # 

@@ -138,16 +138,16 @@ Brief description.
 # - Run Python's doctest module on your docstrings
 # - Run your documentation scripts from scratch, removing any temporary files/results
 #
-# Using data in your documentation
+# Using custom in your documentation
 # --------------------------------
 #
-# Some parts of the documentation require real-world data to be useful.
+# Some parts of the documentation require real-world custom to be useful.
 # For example, you may need more than just a toy example to demonstrate the benefits of one model over another.
-# This subsection provides some tips for including data in your documentation.
+# This subsection provides some tips for including custom in your documentation.
 #
-# If possible, use data available via Gensim's
+# If possible, use custom available via Gensim's
 # `downloader API <https://radimrehurek.com/gensim/gensim_numfocus/auto_examples/010_tutorials/run_downloader_api.html>`__.
-# This will reduce the risk of your documentation becoming obsolete because required data is no longer available.
+# This will reduce the risk of your documentation becoming obsolete because required custom is no longer available.
 #
 # Use the smallest possible dataset: avoid making people unnecessarily load large datasets and models.
 # This will make your documentation faster to run and easier for people to use (they can modify your examples and re-run them quickly).

@@ -16,7 +16,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 #    words and use them to describe the documents in a new and
 #    (hopefully) more semantic way.
 # 2. To make the document representation more compact. This both improves efficiency
-#    (new representation consumes less resources) and efficacy (marginal data
+#    (new representation consumes less resources) and efficacy (marginal custom
 #    trends are ignored, noise-reduction).
 #
 # Creating the Corpus

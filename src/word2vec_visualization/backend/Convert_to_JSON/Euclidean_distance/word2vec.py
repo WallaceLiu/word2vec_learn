@@ -481,7 +481,7 @@ class Word2Vec(utils.SaveLoad):
 
             while True:
                 job = jobs.get()
-                if job is None:  # data finished, exit
+                if job is None:  # custom finished, exit
                     break
                 # update the learning rate before every job
                 alpha = max(self.min_alpha, self.alpha * (1 - 1.0 * word_count[0] / total_words))
@@ -567,7 +567,7 @@ class Word2Vec(utils.SaveLoad):
         so while you can query for word similarity etc., you cannot continue training
         with a model loaded this way.
 
-        `binary` is a boolean indicating whether the data is in binary word2vec format.
+        `binary` is a boolean indicating whether the custom is in binary word2vec format.
         `norm_only` is a boolean indicating whether to only store normalised word2vec vectors in memory.
         Word counts are read from `fvocab` filename, if set (this is the file generated
         by `-save-vocab` flag of the original C tool).
@@ -945,7 +945,7 @@ class Word2Vec(utils.SaveLoad):
 
 
 class BrownCorpus(object):
-    """Iterate over sentences from the Brown corpus (part of NLTK data)."""
+    """Iterate over sentences from the Brown corpus (part of NLTK custom)."""
     def __init__(self, dirname):
         self.dirname = dirname
 

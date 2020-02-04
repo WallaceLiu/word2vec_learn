@@ -2,17 +2,17 @@ r"""
 How to download pre-trained models and corpora
 ==============================================
 
-Demonstrates simple and quick access to common corpora, models, and other data.
+Demonstrates simple and quick access to common corpora, models, and other custom.
 """
 
 import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 ###############################################################################
-# One of Gensim's features is simple and easy access to some common data.
-# The `gensim-data <https://github.com/RaRe-Technologies/gensim-data>`_ project stores a variety of corpora, models and other data.
-# Gensim has a :py:mod:`gensim.downloader` module for programmatically accessing this data.
-# The module leverages a local cache that ensures data is downloaded at most once.
+# One of Gensim's features is simple and easy access to some common custom.
+# The `gensim-custom <https://github.com/RaRe-Technologies/gensim-data>`_ project stores a variety of corpora, models and other custom.
+# Gensim has a :py:mod:`gensim.downloader` module for programmatically accessing this custom.
+# The module leverages a local cache that ensures custom is downloaded at most once.
 #
 # This tutorial:
 #
@@ -71,7 +71,7 @@ info = api.info()
 print(json.dumps(info, indent=4))
 
 ###############################################################################
-# There are two types of data: corpora and models.
+# There are two types of custom: corpora and models.
 print(info.keys())
 
 ###############################################################################

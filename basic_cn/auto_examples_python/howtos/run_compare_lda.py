@@ -39,7 +39,7 @@ def text2tokens(raw_text):
     stemmed_tokens = [stemmer.stem(token) for token in tokens]
     return [token for token in stemmed_tokens if len(token) > 2]  # skip short tokens
 
-dataset = [text2tokens(txt) for txt in newsgroups['data']]  # convert a documents to list of tokens
+dataset = [text2tokens(txt) for txt in newsgroups['custom']]  # convert a documents to list of tokens
 
 from gensim.corpora import Dictionary
 dictionary = Dictionary(documents=dataset, prune_at=None)

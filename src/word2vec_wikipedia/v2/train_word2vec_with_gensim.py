@@ -56,9 +56,9 @@ if __name__ == '__main__':
                                    window=10,
                                    min_count=10,
                                    workers=multiprocessing.cpu_count())
-    model.save("data/model/word2vec_gensim")
-    model.wv.save_word2vec_format("data/model/word2vec_org",
-                                  "data/model/vocabulary",
+    model.save("custom/model/word2vec_gensim")
+    model.wv.save_word2vec_format("custom/model/word2vec_org",
+                                  "custom/model/vocabulary",
                                   binary=False)
 
     end = time()

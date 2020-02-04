@@ -13,14 +13,14 @@ class LoadData():
     '''
     This class is created by zhanglei at 2019/06/10.
     The environment: python3.5 or later and tensorflow1.10 or later.
-    The functions include load data，build vocabulary，pretrain，generate batches.
+    The functions include load custom，build vocabulary，pretrain，generate batches.
     '''
     def __init__(self):
         '''
         数据加载相关参数设置
         '''
-        self.corpus_path = '../../data/wiki.zh.text.jian.part'   #wiki中文语料库文件路径
-        self.stop_words_path = '../../data/stop_words.txt'       #停用词文件路径
+        self.corpus_path = '../../custom/wiki.zh.text.jian.part'   #wiki中文语料库文件路径
+        self.stop_words_path = '../../custom/stop_words.txt'       #停用词文件路径
         self.vocabulary_size = 200000  #词典大小
         self.batch_size = 128          #batch大小
         self.num_skips = 2             #中心词使用的次数

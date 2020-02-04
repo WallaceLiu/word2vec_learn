@@ -87,7 +87,7 @@ function render(mode, el, holder, src) {
 	}
 
 	if (mode == "image") {
-		el.setAttribute("data-src", src);
+		el.setAttribute("custom-src", src);
 		el.setAttribute("alt", text ? text : theme.text ? theme.text + " [" + dimensions_caption + "]" : dimensions_caption);
 
 		if(fallback || !holder.auto){
@@ -202,8 +202,8 @@ if (!canvas.getContext) {
 	fallback = true;
 } else {
 	if (canvas.toDataURL("image/png")
-		.indexOf("data:image/png") < 0) {
-		//Android doesn't support data URI
+		.indexOf("custom:image/png") < 0) {
+		//Android doesn't support custom URI
 		fallback = true;
 	} else {
 		var ctx = canvas.getContext("2d");
@@ -303,7 +303,7 @@ app.add_image = function (src, el) {
 	if (node.length) {
 		for (var i = 0, l = node.length; i < l; i++) {
 			var img = document.createElement("img")
-			img.setAttribute("data-src", src);
+			img.setAttribute("custom-src", src);
 			node[i].appendChild(img);
 		}
 	}
@@ -368,7 +368,7 @@ app.run = function (o) {
 	}
 
 	for (var l = images.length, i = 0; i < l; i++) {
-		var src = images[i].getAttribute("src") || images[i].getAttribute("data-src");
+		var src = images[i].getAttribute("src") || images[i].getAttribute("custom-src");
 		if (src != null && src.indexOf(options.domain) >= 0) {
 			var holder = parse_flags(src.substr(src.lastIndexOf(options.domain) + options.domain.length + 1)
 				.split("/"), options);

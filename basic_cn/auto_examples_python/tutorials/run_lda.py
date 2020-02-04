@@ -15,8 +15,8 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 #
 # In this tutorial we will:
 # 
-# * Load data.
-# * Pre-process data.
+# * Load custom.
+# * Pre-process custom.
 # * Transform documents to a vectorized form.
 # * Train an LDA model.
 #
@@ -35,8 +35,8 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 # * Gensim's LDA model API docs: :py:class:`gensim.models.LdaModel`
 #
 # I would also encourage you to consider each step when applying the model to
-# your data, instead of just blindly applying my solution. The different steps
-# will depend on your data and possibly your goal with the model.
+# your custom, instead of just blindly applying my solution. The different steps
+# will depend on your custom and possibly your goal with the model.
 # 
 # Data
 # ----
@@ -49,7 +49,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 #
 # NIPS (Neural Information Processing Systems) is a machine learning conference
 # so the subject matter should be well suited for most of the target audience
-# of this tutorial.  You can download the original data from Sam Roweis'
+# of this tutorial.  You can download the original custom from Sam Roweis'
 # `website <http://www.cs.nyu.edu/~roweis/data.html>`_.  The code below will
 # also do that for you.
 # 
@@ -111,7 +111,7 @@ print(docs[0][:500])
 # * Tokenize (split the documents into tokens).
 # * Lemmatize the tokens.
 # * Compute bigrams.
-# * Compute a bag-of-words representation of the data.
+# * Compute a bag-of-words representation of the custom.
 # 
 # First we tokenize the text using a regular expression tokenizer from NLTK. We
 # remove numeric tokens and tokens that are only a single character, as they
@@ -157,7 +157,7 @@ docs = [[lemmatizer.lemmatize(token) for token in doc] for doc in docs]
 # "machine" and "learning".
 # 
 # Note that in the code below, we find bigrams and then add them to the
-# original data, because we would like to keep the words "machine" and
+# original custom, because we would like to keep the words "machine" and
 # "learning" as well as the bigram "machine_learning".
 # 
 # .. Important::
@@ -216,7 +216,7 @@ print('Number of documents: %d' % len(corpus))
 # the training parameters.
 # 
 # First of all, the elephant in the room: how many topics do I need? There is
-# really no easy answer for this, it will depend on both your data and your
+# really no easy answer for this, it will depend on both your custom and your
 # application. I have used 10 topics here because I wanted to have a few topics
 # that I could interpret and "label", and because that turned out to give me
 # reasonably good results. You might not need to interpret all your topics, so
@@ -226,7 +226,7 @@ print('Number of documents: %d' % len(corpus))
 # training algorithm. Increasing chunksize will speed up training, at least as
 # long as the chunk of documents easily fit into memory. I've set ``chunksize =
 # 2000``, which is more than the amount of documents, so I process all the
-# data in one go. Chunksize can however influence the quality of the model, as
+# custom in one go. Chunksize can however influence the quality of the model, as
 # discussed in Hoffman and co-authors [2], but the difference was not
 # substantial in this case.
 # 

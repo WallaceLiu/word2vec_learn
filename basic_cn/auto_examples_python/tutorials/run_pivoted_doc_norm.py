@@ -52,20 +52,20 @@ y_test = []
 
 for i in nws:
     if i["set"] == "train" and i["topic"] == cat1:
-        X_train.append(i["data"])
+        X_train.append(i["custom"])
         y_train.append(0)
     elif i["set"] == "train" and i["topic"] == cat2:
-        X_train.append(i["data"])
+        X_train.append(i["custom"])
         y_train.append(1)
     elif i["set"] == "test" and i["topic"] == cat1:
-        X_test.append(i["data"])
+        X_test.append(i["custom"])
         y_test.append(0)
     elif i["set"] == "test" and i["topic"] == cat2:
-        X_test.append(i["data"])
+        X_test.append(i["custom"])
         y_test.append(1)
 
 ###############################################################################
-# Preprocess the data
+# Preprocess the custom
 #
 from gensim.parsing.preprocessing import preprocess_string
 from gensim.corpora import Dictionary

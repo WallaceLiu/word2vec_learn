@@ -43,14 +43,14 @@
 
     // tooltip demo
     $('.tooltip-demo').tooltip({
-      selector: "a[data-toggle=tooltip]"
+      selector: "a[custom-toggle=tooltip]"
     })
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
 
     // popover demo
-    $("a[data-toggle=popover]")
+    $("a[custom-toggle=popover]")
       .popover()
       .click(function(e) {
         e.preventDefault()

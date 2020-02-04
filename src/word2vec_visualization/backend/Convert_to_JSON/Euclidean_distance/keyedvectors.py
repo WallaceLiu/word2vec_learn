@@ -140,7 +140,7 @@ class KeyedVectors(utils.SaveLoad):
 
          `fname` is the file used to save the vectors in
          `fvocab` is an optional file used to save the vocabulary
-         `binary` is an optional boolean indicating whether the data is to be saved
+         `binary` is an optional boolean indicating whether the custom is to be saved
          in binary word2vec format (default: False)
          `total_vec` is an optional parameter to explicitly specify total no. of vectors
          (in case word vectors are appended with document vectors afterwards)
@@ -177,7 +177,7 @@ class KeyedVectors(utils.SaveLoad):
         so while you can query for word similarity etc., you cannot continue training
         with a model loaded this way.
 
-        `binary` is a boolean indicating whether the data is in binary word2vec format.
+        `binary` is a boolean indicating whether the custom is in binary word2vec format.
         `norm_only` is a boolean indicating whether to only store normalised word2vec vectors in memory.
         Word counts are read from `fvocab` filename, if set (this is the file generated
         by `-save-vocab` flag of the original C tool).

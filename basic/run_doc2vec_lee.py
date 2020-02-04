@@ -54,7 +54,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 # "Mary likes John" correspond to identical vectors. There is a solution: bag
 # of `n-grams <https://en.wikipedia.org/wiki/N-gram>`__
 # models consider word phrases of length n to represent documents as
-# fixed-length vectors to capture local word order but suffer from data
+# fixed-length vectors to capture local word order but suffer from custom
 # sparsity and high dimensionality.
 #
 # Second, the model does not attempt to learn the meaning of the underlying
@@ -127,7 +127,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 import os
 import gensim
-# Set file names for train and test data
+# Set file names for train and test custom
 test_data_dir = os.path.join(gensim.__path__[0], 'test', 'test_data')
 lee_train_file = os.path.join(test_data_dir, 'lee_background.cor')
 lee_test_file = os.path.join(test_data_dir, 'lee.cor')
@@ -159,7 +159,7 @@ def read_corpus(fname, tokens_only=False):
             if tokens_only:
                 yield tokens
             else:
-                # For training data, add tags
+                # For training custom, add tags
                 yield gensim.models.doc2vec.TaggedDocument(tokens, [i])
 
 train_corpus = list(read_corpus(lee_train_file))
@@ -243,7 +243,7 @@ print(vector)
 # To assess our new model, we'll first infer new vectors for each document of
 # the training corpus, compare the inferred vectors with the training corpus,
 # and then returning the rank of the document based on self-similarity.
-# Basically, we're pretending as if the training corpus is some new unseen data
+# Basically, we're pretending as if the training corpus is some new unseen custom
 # and then seeing how they compare with the trained model. The expectation is
 # that we've likely overfit our model (i.e., all of the ranks will be less than
 # 2) and so we should be able to find similar documents very easily.

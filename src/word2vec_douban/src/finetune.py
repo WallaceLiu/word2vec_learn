@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-finetune", required=True, help="Fine tune some model")
-    parser.add_argument("-train", required=True, help="Use text data from file TRAIN to train the model")
+    parser.add_argument("-train", required=True, help="Use text custom from file TRAIN to train the model")
     args = parser.parse_args()
 
     outputpath = "../model/"
@@ -43,5 +43,5 @@ if __name__ == '__main__':
     logger.info("Saved vector in " + outputfile2)
 
 
-    questionfile = "../data/questions-words-Zh.txt"
+    questionfile = "../custom/questions-words-Zh.txt"
     model.accuracy(questionfile)

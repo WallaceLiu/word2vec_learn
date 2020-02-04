@@ -36,7 +36,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 # Load corpus
 # -----------
 #
-# Our data for the tutorial will be the `IMDB archive
+# Our custom for the tutorial will be the `IMDB archive
 # <http://ai.stanford.edu/~amaas/data/sentiment/>`_.
 # If you're not familiar with this dataset, then here's a brief intro: it
 # contains several thousand movie reviews.
@@ -69,14 +69,14 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 # #. Unpack it and extract each movie review
 # #. Split the reviews into training and test datasets
 #
-# First, let's define a convenient datatype for holding data for a single document:
+# First, let's define a convenient datatype for holding custom for a single document:
 #
 # * words: The text of the document, as a ``list`` of words.
 # * tags: Used to keep the index of the document in the entire dataset.
 # * split: one of ``train``\ , ``test`` or ``extra``. Determines how the document will be used (for training, testing, etc).
 # * sentiment: either 1 (positive), 0 (negative) or None (unlabeled document).
 #
-# This data type is helpful for later evaluation and reporting.
+# This custom type is helpful for later evaluation and reporting.
 # In particular, the ``index`` member will help us quickly and easily retrieve the vectors for a document from a model.
 #
 import collections
@@ -169,7 +169,7 @@ print('%d docs: %d train-sentiment, %d test-sentiment' % (len(alldocs), len(trai
 #   mode, matched in gensim with ``dm=0``
 # * Added to that DBOW model are two DM models, one which averages context
 #   vectors (\ ``dm_mean``\ ) and one which concatenates them (\ ``dm_concat``\ ,
-#   resulting in a much larger, slower, more data-hungry model)
+#   resulting in a much larger, slower, more custom-hungry model)
 # * A ``min_count=2`` saves quite a bit of model memory, discarding only words
 #   that appear in a single doc (and are thus no more expressive than the
 #   unique-to-each doc vectors themselves)
@@ -245,7 +245,7 @@ import statsmodels.api as sm
 from random import sample
 
 def logistic_predictor_from_data(train_targets, train_regressors):
-    """Fit a statsmodel logistic predictor on supplied data"""
+    """Fit a statsmodel logistic predictor on supplied custom"""
     logit = sm.Logit(train_targets, train_regressors)
     predictor = logit.fit(disp=0)
     # print(predictor.summary())
@@ -417,7 +417,7 @@ for model in word_models:
 # also need word-vectors.
 #
 # Words from DM models tend to show meaningfully similar words when there are
-# many examples in the training data (as with 'plot' or 'actor'). (All DM modes
+# many examples in the training custom (as with 'plot' or 'actor'). (All DM modes
 # inherently involve word-vector training concurrent with doc-vector training.)
 #
 

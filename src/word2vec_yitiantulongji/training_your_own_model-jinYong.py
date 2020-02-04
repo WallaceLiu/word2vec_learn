@@ -52,7 +52,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # #
 # # ``min_count`` is for pruning the internal dictionary. Words that appear only
 # # once or twice in a billion-word corpus are probably uninteresting typos and
-# # garbage. In addition, there’s not enough data to make any meaningful training
+# # garbage. In addition, there’s not enough custom to make any meaningful training
 # # on those words, so it’s best to ignore them:
 # #
 # # default value of min_count=5
@@ -67,7 +67,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # # ``size`` is the number of dimensions (N) of the N-dimensional space that
 # # gensim Word2Vec maps the words onto.
 # #
-# # Bigger size values require more training data, but can lead to better (more
+# # Bigger size values require more training custom, but can lead to better (more
 # # accurate) models. Reasonable values are in the tens to hundreds.
 # #
 #
@@ -227,9 +227,9 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # # Let's run some benchmarks to see effect of the training loss computation code
 # # on training time.
 # #
-# # We'll use the following data for the benchmarks:
+# # We'll use the following custom for the benchmarks:
 # #
-# # #. Lee Background corpus: included in gensim's test data
+# # #. Lee Background corpus: included in gensim's test custom
 # # #. Text8 corpus.  To demonstrate the effect of corpus size, we'll look at the
 # #    first 1MB, 10MB, 50MB of the corpus, as well as the entire thing.
 # #
@@ -266,7 +266,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #
 # ###############################################################################
 # # We now compare the training time taken for different combinations of input
-# # data and model training parameters like ``hs`` and ``sg``.
+# # custom and model training parameters like ``hs`` and ``sg``.
 # #
 # # For each combination, we repeat the test several times to obtain the mean and
 # # standard deviation of the test duration.
@@ -290,7 +290,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # else:
 #     input_data_subset = input_data
 #
-# for data in input_data_subset:
+# for custom in input_data_subset:
 #     for sg_val in sg_values:
 #         for hs_val in hs_values:
 #             for loss_flag in [True, False]:
@@ -298,7 +298,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #                 for i in range(3):
 #                     start_time = time.time()
 #                     w2v_model = gensim.models.Word2Vec(
-#                         data,
+#                         custom,
 #                         compute_loss=loss_flag,
 #                         sg=sg_val,
 #                         hs=hs_val,
@@ -311,7 +311,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #                 time_std = np.std(time_taken_list)
 #
 #                 model_result = {
-#                     'train_data': data.name,
+#                     'train_data': custom.name,
 #                     'compute_loss': loss_flag,
 #                     'sg': sg_val,
 #                     'hs': hs_val,
@@ -402,7 +402,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # # The word embeddings made by the model can be visualised by reducing
 # # dimensionality of the words to 2 dimensions using tSNE.
 # #
-# # Visualisations can be used to notice semantic and syntactic trends in the data.
+# # Visualisations can be used to notice semantic and syntactic trends in the custom.
 # #
 # # Example:
 # #
@@ -425,7 +425,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #     num_dimensions = 2  # final num dimensions (2D, 3D, etc)
 #
 #     vectors = []  # positions in vector space
-#     labels = []  # keep track of words to label our data again later
+#     labels = []  # keep track of words to label our custom again later
 #     for word in model.wv.vocab:
 #         vectors.append(model.wv[word])
 #         labels.append(word)
@@ -452,13 +452,13 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #     import plotly.graph_objs as go
 #
 #     trace = go.Scatter(x=x_vals, y=y_vals, mode='text', text=labels)
-#     data = [trace]
+#     custom = [trace]
 #
 #     if plot_in_notebook:
 #         init_notebook_mode(connected=True)
-#         iplot(data, filename='word-embedding-plot')
+#         iplot(custom, filename='word-embedding-plot')
 #     else:
-#         plot(data, filename='word-embedding-plot.html')
+#         plot(custom, filename='word-embedding-plot.html')
 #
 #
 # def plot_with_matplotlib(x_vals, y_vals, labels):
@@ -471,7 +471,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 #     plt.scatter(x_vals, y_vals)
 #
 #     #
-#     # Label randomly subsampled 25 data points
+#     # Label randomly subsampled 25 custom points
 #     #
 #     indices = list(range(len(labels)))
 #     selected_indices = random.sample(indices, 25)
@@ -492,7 +492,7 @@ vv = model.wv.similarity('张君宝', '张三丰')
 # # Conclusion
 # # ----------
 # #
-# # In this tutorial we learned how to train word2vec models on your custom data
+# # In this tutorial we learned how to train word2vec models on your custom custom
 # # and also how to evaluate it. Hope that you too will find this popular tool
 # # useful in your Machine Learning tasks!
 # #

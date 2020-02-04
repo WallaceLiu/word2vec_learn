@@ -6,7 +6,7 @@ from gensim.models import Word2Vec
 
 #################### config ###################
 modelfile = "../model/size300window5sg1min_count100negative10iter50.model"
-questionfile = "../data/questions-words-Zh.txt"
+questionfile = "../custom/questions-words-Zh.txt"
 ############### end of config #################
 
 logger = logging.getLogger()

@@ -57,8 +57,8 @@ def load_pretrain_model(model_path):
 
 
 if __name__ == '__main__':
-	corpus_path = '../data/toutiao_word_corpus.txt' #中文预料文件路径
-    freq_path = '../data/words_freq_info.txt' #词频文件保存路径
+	corpus_path = '../custom/toutiao_word_corpus.txt' #中文预料文件路径
+    freq_path = '../custom/words_freq_info.txt' #词频文件保存路径
     word_list = stat_words(corpus_path, freq_path) #统计保存预料中词频信息并保存
     model_path = 'toutiao_word_embedding.bin' #训练词向量文件保存路径
     get_word_embedding(corpus_path, model_path) #训练得到预料的词向量

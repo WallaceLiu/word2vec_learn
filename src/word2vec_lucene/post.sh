@@ -21,7 +21,7 @@ URL=http://localhost:8983/solr/${SOLRCORE}/update
 
 for f in $FILES; do
   echo Posting file $f to $URL
-  curl $URL --data-binary @$f -H 'Content-type:application/xml' 
+  curl $URL --custom-binary @$f -H 'Content-type:application/xml'
   echo
 done
 

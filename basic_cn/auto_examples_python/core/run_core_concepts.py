@@ -82,7 +82,7 @@ text_corpus = [
 # After collecting our corpus, there are typically a number of preprocessing
 # steps we want to undertake. We'll keep it simple and just remove some
 # commonly used English words (such as 'the') and words that occur only once in
-# the corpus. In the process of doing so, we'll tokenize our data.
+# the corpus. In the process of doing so, we'll tokenize our custom.
 # Tokenization breaks up the documents into words (in this case using space as
 # a delimiter).
 #

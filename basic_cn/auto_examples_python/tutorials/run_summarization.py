@@ -60,7 +60,7 @@ text = (
 print(text)
 
 ###############################################################################
-# To summarize this text, we pass the **raw string data** as input to the
+# To summarize this text, we pass the **raw string custom** as input to the
 # function "summarize", and it will return a summary.
 #
 # Note: make sure that the string does not contain any newlines where the line
@@ -195,12 +195,12 @@ plt.show()
 # about 3.1 seconds, while summarizing 35,000 characters of this book takes
 # about 8.5 seconds. So the former is **more than twice as fast**.
 #
-# One reason for this difference in running times is the data structure that is
-# used. The algorithm represents the data using a graph, where vertices (nodes)
+# One reason for this difference in running times is the custom structure that is
+# used. The algorithm represents the custom using a graph, where vertices (nodes)
 # are sentences, and then constructs weighted edges between the vertices that
 # represent how the sentences relate to each other. This means that every piece
 # of text will have a different graph, thus making the running times different.
-# The size of this data structure is **quadratic in the worst case** (the worst
+# The size of this custom structure is **quadratic in the worst case** (the worst
 # case is when each vertex has an edge to every other vertex).
 #
 # Another possible reason for the difference in running times is that the
