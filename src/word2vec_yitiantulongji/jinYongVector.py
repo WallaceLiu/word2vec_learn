@@ -1,6 +1,5 @@
 import jieba
 # import gensim.models.word2vec as w2v
-# import gensim.models.word2vec as w2v
 from gensim.test.utils import common_texts
 from gensim.models import KeyedVectors, Word2Vec
 

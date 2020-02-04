@@ -11,6 +11,8 @@ This repository hosts the `word2vec` pre-trained **Google News** corpus
 
 It is mirroring the data from the official [word2vec website](https://code.google.com/archive/p/word2vec/):  
 [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing)
+or 
+[GoogleNews-vectors-negative300.bin.gz](https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz)
 
 The motivation was to provide an easy (programmatical) way to 
 download the model file via `git clone` instead of accessing 
