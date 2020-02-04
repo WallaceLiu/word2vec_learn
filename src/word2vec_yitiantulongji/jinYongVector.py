@@ -3,7 +3,7 @@ import jieba
 from gensim.test.utils import common_texts
 from gensim.models import KeyedVectors, Word2Vec
 
-# file_path = '../txt/jinYong.txt'
+# file_path = '../txt/yitiantulongji.txt'
 
 #
 # fin = open(file_path, 'r', encoding='UTF-8')
