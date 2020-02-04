@@ -21,4 +21,13 @@ the Google Drive link.
 You will need to install [git lfs](https://git-lfs.github.com/) 
 to be able to clone this.
 
+# lee_background.cor
 
+# questions-words.txt
+
+# wordsim353.tsv
+
+# custom
+
+当做一个语料库，有各种文档。
+包括其他文章，倚天屠龙记
