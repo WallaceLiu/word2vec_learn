@@ -1,7 +1,7 @@
 import jieba
-# import gensim.models.word2vec as w2v
+import gensim.models.word2vec as w2v
 from gensim.test.utils import common_texts
-from gensim.models import KeyedVectors, Word2Vec
+# from gensim.models import KeyedVectors, Word2Vec
 
 # file_path = '../txt/yitiantulongji.txt'
 
@@ -22,9 +22,12 @@ from gensim.models import KeyedVectors, Word2Vec
 for t in common_texts:
     print(t)
 
-# model = Word2Vec(common_texts, size=100, window=5, min_count=1, workers=4)
-# word_vectors = model.wv
+model = w2v.Word2Vec(common_texts, size=100, window=5, min_count=1, workers=4)
+word_vectors = model.wv.vocab.get_vector()
 
+import numpy as np
+
+np.array().astype('')
 
 
 
